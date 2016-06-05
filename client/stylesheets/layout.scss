@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500);
+
+$primary-font: 'Raleway', sans-serif;
+$primary-color: #60803B;
+$primary-color-dark: #3C4E26;
+$grey: #4F4F4F;
+$white: #F1F1F1;
+$light-grey: #CECECE;
+$faded: #979797;
+
+.faded {
+  color: $faded
+}
+
+p, input, a, h2, h1 {
+  font-family: $primary-font
+}
+
+h1 {
+  color: $primary-color;
+}
+
+h2 {
+  color: $grey
+}
+
+.center {
+  text-align: center;
+}
+
+.spacing {
+  margin: 10px;
+}
+
+.button {
+  width: 175px;
+  text-align: center;
+  padding: 0px;
+  height: 35px;
+  background-color: $primary-color;
+  color: white;
+  border-width: 0px;
+}
+
+.button:hover {
+  background-color: $primary-color-dark;
+}
+
+input:focus {
+  outline: none !important;
+}
+
+input {
+  height: 35px;
+  width: 175px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: $light-grey;
+  border-width: 1px;
+  padding: 5px;
+  padding-left: 15px;
+}
