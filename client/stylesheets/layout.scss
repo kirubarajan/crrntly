@@ -8,11 +8,17 @@ $white: #F1F1F1;
 $light-grey: #CECECE;
 $faded: #979797;
 
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
 .faded {
   color: $faded
 }
 
-p, input, a, h2, h1 {
+p, input, a, h2, h1, h3, h4 {
   font-family: $primary-font
 }
 
@@ -59,4 +65,17 @@ input {
   border-width: 1px;
   padding: 5px;
   padding-left: 15px;
+}
+
+.team {
+
+  color: $grey;
+  background: #FFF;
+  border: 1px solid #AAA;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 30px;
+  overflow: hidden;
+  width: 100%
+
 }

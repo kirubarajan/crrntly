@@ -21,7 +21,7 @@ autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
 twbs:bootstrap
 iron:router
-aldeed:collection2
 fourseven:scss
 accounts-ui
 accounts-password
+momentjs:moment
