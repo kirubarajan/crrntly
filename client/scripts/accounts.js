@@ -40,3 +40,16 @@ Template.login.events({
   }
 
 })
+
+Template.logout.events({
+  "submit form": function(event){
+
+    event.preventDefault();
+
+    Meteor.logout(function(){
+      Router.go('/');
+    });
+
+
+  }
+});

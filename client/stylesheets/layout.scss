@@ -8,6 +8,30 @@ $white: #F1F1F1;
 $light-grey: #CECECE;
 $faded: #979797;
 
+.accept {
+  color: #769d48
+}
+
+.decline {
+  color: #cc4400;
+}
+
+.accept:hover {
+  color: #769d48;
+  text-decoration: none;
+  cursor:pointer
+}
+
+.decline:hover {
+  color: #cc4400;
+  text-decoration: none;
+  cursor:pointer
+}
+
+.heavy {
+  font-weight: 600
+}
+
 a:hover {
   text-decoration: none
 }

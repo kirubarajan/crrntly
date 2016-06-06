@@ -43,37 +43,26 @@
 
     </div>
 
-    <div class="row" style="margin-top: 40px">
+    <div class="row" style="margin-top: 40px; margin-bottom: 40px">
 
       <h2 class="center"> Teams </h2>
 
-      <div class="col-md-6 center">
+      {{#each team}}
 
-        <div class="team center">
+        <div class="col-md-4">
 
-          <h4> Aspiring Youth </h4>
+          <a href="{{pathFor route='team'}}">
+            <div class="team">
 
-          <p>
-            nonprofit thing
-          </p>
+              <h4> {{title}} </h4>
+              <p> {{message}} </p>
 
-        </div>
-
-      </div>
-
-      <div class="col-md-6 center">
-
-        <div class="team center">
-
-          <h4> Science Project </h4>
-
-          <p>
-            physics presentation
-          </p>
+            </div>
+          </a>
 
         </div>
 
-      </div>
+      {{/each}}
 
     </div>
 

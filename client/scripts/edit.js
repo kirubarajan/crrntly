@@ -13,7 +13,17 @@ Template.edit.events({
   },
 
   'submit #invite': function() {
+
     event.preventDefault();
+
+    let id = event.target.id.value;
+
+    if (this.mates.indexOf(id) == -1) {
+      Invitations.insert({user: id, team: this._id});
+    }
+
+    Router.go('/teams');
+
   }
 
 })
