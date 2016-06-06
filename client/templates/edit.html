@@ -1,0 +1,36 @@
+<template name="edit">
+
+  <div class="container">
+    <div class="row center">
+
+      <div class="col-md-2">
+
+      </div>
+
+      <div class="col-md-8">
+
+        <h1> {{title}} <a class="header-link" href="{{pathFor route='team'}}"> back </a> </h1>
+
+        <form id="update">
+          <input type="text" placeholder="Title" name="title" value="{{title}}"/>
+          <input type="text" placeholder="Message" name="message" value="{{message}}"/>
+          <input class="button spacing" type="submit" value="Save" />
+        </form>
+
+        <hr />
+
+        <form id="invite">
+          <input type="text" placeholder="User ID" name="id"/>
+          <input class="button spacing" type="submit" value="Invite" />
+        </form>
+
+      </div>
+
+      <div class="col-md-2">
+
+      </div>
+
+    </div>
+  </div>
+
+</template>

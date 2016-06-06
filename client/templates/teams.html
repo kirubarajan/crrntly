@@ -10,7 +10,7 @@
 
       <div class="col-md-8">
 
-        <h1> Teams <span> <a style="font-size: 40%; font-weight: 400" href="/team/new"> new </a> </span> </h1>
+        <h1> Teams <span> <a class="header-link" href="/team/new"> new </a> </span> </h1>
 
         <hr />
 
@@ -28,13 +28,14 @@
 
         <div class="col-md-4">
 
-          <div class="team">
+          <a href="{{pathFor route='team'}}">
+            <div class="team">
 
-            <h4> {{name}} </h4>
+              <h4> {{title}} </h4>
+              <p> {{message}} </p>
 
-            <p> {{description}} </p>
-
-          </div>
+            </div>
+          </a>
 
         </div>
 

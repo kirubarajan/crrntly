@@ -10,8 +10,6 @@ Template.teams.helpers({
 
     }
 
-    console.log(teams);
-
     return teams
 
   }

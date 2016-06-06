@@ -8,6 +8,10 @@ $white: #F1F1F1;
 $light-grey: #CECECE;
 $faded: #979797;
 
+a:hover {
+  text-decoration: none
+}
+
 .vcenter {
     display: inline-block;
     vertical-align: middle;
@@ -78,4 +82,25 @@ input {
   overflow: hidden;
   width: 100%
 
+}
+
+.team:hover {
+
+  background-color: $primary-color;
+  border: 1px solid $primary-color;
+  color: $white
+
+}
+
+.team:active {
+
+  background-color: $primary-color-dark;
+  border: 1px solid $primary-color-dark;
+  color: $light-grey
+
+}
+
+.header-link {
+  font-size: 40%;
+  font-weight: 400
 }
