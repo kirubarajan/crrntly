@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500);
+
+$primary-font: 'Raleway', sans-serif;
+$primary-color: #60803B;
+$primary-color-dark: #3C4E26;
+$grey: #4F4F4F;
+$white: #F1F1F1;
+$light-grey: #CECECE;
+$faded: #979797;
+
+.activity {
+
+  color: $faded;
+  background: #FFF;
+  border: 1px solid #AAA;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 5px;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+
+}
+
+.activity:hover {
+
+  background-color: $light-grey;
+  border: 1px solid $light-grey;
+  color: $faded;
+  cursor: pointer;
+
+}
+
+.new-activity {
+
+  color: $light-grey;
+  background: $white;
+  border:  1px solid $white;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 5px;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+
+}
+
+.new-activity:hover {
+
+  background-color: $light-grey;
+  border: 1px solid $light-grey;
+  color: $faded;
+  cursor: pointer;
+
+}
+
+
+.team {
+
+  color: $grey;
+  background: #FFF;
+  border: 1px solid #AAA;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 30px;
+  overflow: hidden;
+  width: 100%
+
+}
+
+.team:hover {
+
+  background-color: $primary-color;
+  border: 1px solid $primary-color;
+  color: $white !important
+
+}
+
+.team:active {
+
+  background-color: $primary-color-dark;
+  border: 1px solid $primary-color-dark;
+  color: $light-grey
+
+}

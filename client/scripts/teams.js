@@ -38,9 +38,7 @@ Template.teams.events({
 
     let invitation = Invitations.findOne({user: Meteor.userId(), team: this._id});
 
-    let team = Teams.findOne({_id: invitation.team});
-
-    team.mates.push(Meteor.userId());
+    Teams.update({_id: invitation.team}, {$push: {mates: Meteor.userId()}});
 
     Meteor.users.update({_id: Meteor.userId()}, {$push: {"profile.teams": invitation.team}});
 
