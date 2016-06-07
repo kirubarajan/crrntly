@@ -95,6 +95,27 @@ input {
   padding-left: 15px;
 }
 
+select {
+  background-color: $white;
+  height: 35px;
+  width: 175px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: $light-grey;
+  border-width: 1px;
+  padding: 5px;
+  padding-left: 15px;
+  outline: none !important;
+}
+
+select:hover {
+  outline: none !important;
+}
+
+select:active {
+  outline: none !important;
+}
+
 .header-link {
   font-size: 40%;
   font-weight: 400

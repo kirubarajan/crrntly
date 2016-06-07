@@ -25,3 +25,6 @@ fourseven:scss
 accounts-ui
 accounts-password
 momentjs:moment
+random
+peppelg:bootstrap-3-modal
+session

@@ -1,0 +1,31 @@
+<template name="newActivityModal">
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-body center">
+
+                    <h3> New Activity </h3>
+
+                    <hr />
+
+                    <form id="login">
+
+                      <input class="spacing" placeholder="Activity" type="text" name="activity" /> <br />
+                      <select>
+                        <option value="" disabled selected>Section</option>
+                        {{#each section}}
+                          <option selected="{{isSelected}}"> {{title}} </option>
+                        {{/each}}
+                      </select>
+                      <br />
+                      <input class="button spacing" type="submit" value="Add" /> <br />
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</template>

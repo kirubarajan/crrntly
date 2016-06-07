@@ -1,4 +1,4 @@
-<template name="profile">
+<template name="settings">
 
   <div class="container">
 
@@ -10,7 +10,7 @@
 
       <div class="col-md-8">
 
-        <h1> Profile </h1>
+        <h1> Settings </h1>
 
         <hr />
 
@@ -26,43 +26,18 @@
 
       <div class="col-md-2" style="text-align: right">
 
-
-
       </div>
 
-      <div class="col-md-8">
+      <div class="col-md-8 center">
 
-        <h3> {{currentUser.profile.name}}  <img style="margin-left: 50px; border-radius: 10px" src="{{currentUser.profile.avatar}}" /></h3>
-
+        <img style="border-radius: 10px; width: 30%" src="{{currentUser.profile.avatar}}" />
+        <h3> {{currentUser.profile.name}} </h3>
 
       </div>
 
       <div class="col-md-2">
 
       </div>
-
-    </div>
-
-    <div class="row" style="margin-top: 40px; margin-bottom: 40px">
-
-      <h2 class="center"> Teams </h2>
-
-      {{#each team}}
-
-        <div class="col-md-4">
-
-          <a href="{{pathFor route='team'}}">
-            <div class="team">
-
-              <h4> {{title}} </h4>
-              <p> {{message}} </p>
-
-            </div>
-          </a>
-
-        </div>
-
-      {{/each}}
 
     </div>
 
