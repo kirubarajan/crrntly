@@ -23,8 +23,6 @@ Template.team.helpers({
 
     }
 
-    console.log(sections);
-
     return sections
 
   },
@@ -56,6 +54,14 @@ Template.team.events({
     Session.set('section', this._id);
     Modal.show('newActivityModal');
 
-  }
+  },
+
+  'click .activity': function(event) {
+
+      Session.set('activity', this._id);
+      console.log(this._id);
+      Modal.show('activityModal');
+
+    }
 
 })

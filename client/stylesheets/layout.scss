@@ -7,6 +7,8 @@ $grey: #4F4F4F;
 $white: #F1F1F1;
 $light-grey: #CECECE;
 $faded: #979797;
+$red: #D9130B;
+$red-dark: #cc4400;
 
 .accept {
   color: #769d48
@@ -74,10 +76,26 @@ h2 {
   background-color: $primary-color;
   color: white;
   border-width: 0px;
+  border-radius: 5px;
 }
 
 .button:hover {
   background-color: $primary-color-dark;
+}
+
+.delete-button {
+  width: 175px;
+  text-align: center;
+  padding: 0px;
+  height: 35px;
+  background-color: $red;
+  color: $white;
+  border-width: 0px;
+  border-radius: 5px;
+}
+
+.delete-button:hover {
+  background-color: $red-dark;
 }
 
 input:focus {
