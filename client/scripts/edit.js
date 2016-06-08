@@ -16,9 +16,11 @@ Template.edit.events({
 
     event.preventDefault();
 
-    let email = event.target.email.value;
+    let id = event.target.id.value;
 
-    Meteor.call("inviteUser", this._id, email);
+    if (this.mates.indexOf(id) == -1) {
+      Invitations.insert({user: id, team: this._id});
+    }
 
     Router.go('/teams');
 
