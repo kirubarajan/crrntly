@@ -29,6 +29,28 @@ Template.activityModal.helpers({
       return
     }
 
+  },
+
+  'update': function() {
+
+    let activity_id = Session.get('activity');
+
+    return Updates.find({activity: activity_id});
+
+  },
+
+  'users': function() {
+
+    let activity_id = Session.get('activity');
+
+    var activity = Activities.findOne(activity_id);
+
+    for (var i = 0; i < activity.users.length; i++) {
+
+      
+
+    }
+
   }
 
 })
@@ -101,6 +123,20 @@ Template.activityModal.events({
     let section = Teams.findOne({_id: Router.current().params._id}).sections[index]._id;
 
     Activities.update(Session.get('activity'), {$set: {section: section}});
+
+  },
+
+  'submit #update': function(event) {
+
+    event.preventDefault();
+
+    let update = event.target.update.value;
+
+    event.target.update.value = "";
+
+    Updates.insert({activity: Session.get('activity'), title: update, date: moment().format("MMMM Do YYYY")});
+
+    console.log(update);
 
   }
 

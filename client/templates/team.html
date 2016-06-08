@@ -9,7 +9,13 @@
 
       <div class="col-md-8">
 
-        <h1> {{title}} <a class="header-link" href="{{pathFor route='edit'}}"> edit </a> </h1>
+        <h1> {{title}}
+
+          {{#if isAdmin}}
+            <a class="header-link" href="{{pathFor route='edit'}}"> edit </a>
+          {{/if}}
+          
+        </h1>
 
         <p> {{message}} </p>
 
