@@ -28,7 +28,7 @@ Template.edit.events({
 
   'click #delete': function() {
 
-    
+    Modal.show('deleteModal');
 
   }
 

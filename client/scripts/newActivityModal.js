@@ -24,7 +24,7 @@ Template.newActivityModal.events({
 
     let activity = event.target.activity.value;
 
-    Activities.insert({team: Router.current().params._id, title: activity, section: Session.get('section'), date: moment().format("MMMM Do YYYY")});
+    Activities.insert({author: Meteor.userId(), team: Router.current().params._id, title: activity, section: Session.get('section'), date: moment().format("MMMM Do YYYY")});
 
     Modal.hide('newActivityModal');
 

@@ -1,5 +1,6 @@
 Meteor.methods({
-  inviteUser:function(team, email) {
+
+  inviteUser: function(team, email) {
 
     var user = Meteor.users.findOne({"emails.address": email});
 
@@ -7,5 +8,14 @@ Meteor.methods({
       Invitations.insert({user: user._id, team: team});
     }
 
+  },
+
+  clearActivities: function(team) {
+    Activities.remove({team: team});
+  },
+
+  getName: function(user) {
+    return Meteor.users.findOne(user)
   }
+
 });
