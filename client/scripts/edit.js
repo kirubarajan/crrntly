@@ -24,6 +24,12 @@ Template.edit.events({
 
     Router.go('/teams');
 
+  },
+
+  'click #delete': function() {
+
+    
+
   }
 
 })
