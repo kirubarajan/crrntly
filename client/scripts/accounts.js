@@ -25,11 +25,10 @@ Template.login.events({
       Accounts.createUser({
         email: email,
         password: password,
-        name: name,
-        bio: "eager to work!",
-        teams: [],
-        avatar: "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+        teams: []
       }, function() {
+
+        Profiles.insert({user: Meteor.userId(), name: name, bio: 'eager to be productive!', avatar: "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"});
 
       });
 

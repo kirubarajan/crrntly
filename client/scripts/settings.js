@@ -12,6 +12,14 @@ Template.settings.helpers({
 
     return teams
 
+  },
+
+  'user': function() {
+
+    var user = Meteor.userId();
+
+    return Profiles.findOne({user: user})
+
   }
 
 });

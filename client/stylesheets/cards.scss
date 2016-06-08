@@ -8,6 +8,24 @@ $white: #F1F1F1;
 $light-grey: #CECECE;
 $faded: #979797;
 
+.icon-button {
+
+  background-color: transparent;
+  border-width: 0px;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+
+.icon-button:hover {
+
+  background-color: transparent;
+  border-width: 0px;
+  color: $grey !important;
+
+}
+
+
 .activity {
 
   color: $grey;
@@ -81,5 +99,19 @@ $faded: #979797;
   background-color: $primary-color-dark;
   border: 1px solid $primary-color-dark;
   color: $light-grey
+
+}
+
+.note {
+
+  color: $grey;
+  background: #FFF;
+  border: 1px solid #AAA;
+  border-radius: 5px;
+  overflow: hidden;
+  padding-top: 10px;
+  width: 100%;
+  text-align: center;
+
 
 }

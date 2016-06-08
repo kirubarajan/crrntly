@@ -13,9 +13,9 @@
 
                       <input class="spacing" placeholder="Activity" autofocus=autofocus type="text" name="activity" /> <br />
                       <select>
-                        <option value="" disabled selected>Section</option>
+                        <option name="section" value="" disabled selected>Section</option>
                         {{#each section}}
-                          <option selected="{{isSelected}}"> {{title}} </option>
+                          <option selected="{{isSelected}}" name={{_id}}> {{title}} </option>
                         {{/each}}
                       </select>
                       <br />

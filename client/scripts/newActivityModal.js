@@ -18,15 +18,20 @@ Template.newActivityModal.helpers({
 })
 
 Template.newActivityModal.events({
+
   'submit form': function(event) {
 
     event.preventDefault();
 
     let activity = event.target.activity.value;
+    let section = $("select").val()
+
+    console.log(section);
 
     Activities.insert({author: Meteor.userId(), team: Router.current().params._id, title: activity, section: Session.get('section'), date: moment().format("MMMM Do YYYY")});
 
     Modal.hide('newActivityModal');
 
   }
+
 })
