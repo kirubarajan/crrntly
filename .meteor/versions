@@ -17,6 +17,7 @@ caching-compiler@1.0.4
 caching-html-compiler@1.0.6
 callback-hook@1.0.8
 check@1.2.1
+coffeescript@1.0.17
 ddp@1.2.5
 ddp-client@1.2.7
 ddp-common@1.2.5
@@ -24,6 +25,9 @@ ddp-rate-limiter@1.0.4
 ddp-server@1.2.6
 deps@1.0.12
 diff-sequence@1.0.5
+easy:search@2.0.9
+easysearch:components@2.0.9
+easysearch:core@2.0.9
 ecmascript@0.4.3
 ecmascript-runtime@0.2.10
 ejson@1.0.11
@@ -69,6 +73,12 @@ npm-bcrypt@0.8.5
 npm-mongo@1.4.43
 observe-sequence@1.0.11
 ordered-dict@1.0.7
+peerlibrary:assert@0.2.5
+peerlibrary:base-component@0.14.0
+peerlibrary:blaze-components@0.16.2
+peerlibrary:computed-field@0.3.1
+peerlibrary:data-lookup@0.1.0
+peerlibrary:reactive-field@0.1.0
 peppelg:bootstrap-3-modal@1.0.4
 promise@0.6.7
 random@1.0.9
@@ -78,6 +88,7 @@ reactive-var@1.0.9
 reload@1.1.8
 retry@1.0.7
 routepolicy@1.0.10
+semantic:ui-search@2.1.7
 service-configuration@1.0.9
 session@1.1.5
 sha@1.0.7

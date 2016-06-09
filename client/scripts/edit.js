@@ -18,7 +18,19 @@ Template.edit.events({
 
     let email = event.target.email.value;
 
-    Meteor.call('inviteUser', this._id, email);
+    if (this.mates.indexOf(email) == -1) {
+
+      var user = Profiles.find({email: email}).fetch();
+
+      console.log(user);
+
+      if (Teams.findOne({_id: Router.current().params._id}).mates.indexOf(user.user) == -1) {
+
+        Invitations.insert({user: user.user, team: Router.current().params._id});
+
+      }
+
+    }
 
     Router.go('/teams');
 

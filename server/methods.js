@@ -2,12 +2,14 @@ Meteor.methods({
 
   inviteUser: function(team, email) {
 
-    var user = Meteor.users.findOne({"emails.address": email});
+    var user = Profiles.findOne({email: email});
 
-    if (Teams.findOne({_id: team}).mates.indexOf(user._id) == -1) {
+    console.log(email);
 
-      Invitations.insert({user: user._id, team: team});
-      
+    if (Teams.findOne({_id: team}).mates.indexOf(user.user) == -1) {
+
+      Invitations.insert({user: user.user, team: team});
+
     }
 
   },

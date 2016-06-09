@@ -28,7 +28,7 @@ Template.login.events({
         teams: []
       }, function() {
 
-        Profiles.insert({user: Meteor.userId(), name: name, bio: 'eager to be productive!', avatar: "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"});
+        Profiles.insert({email: email, user: Meteor.userId(), name: name, bio: 'eager to be productive!', avatar: "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"});
 
       });
 

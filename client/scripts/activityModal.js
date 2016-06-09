@@ -1,3 +1,10 @@
+Template.activityModal.rendered = function() {
+    if(!this._rendered) {
+      this._rendered = true;
+      Session.set('query', '');
+    }
+}
+
 Template.activityModal.helpers({
 
   'activity': function() {
@@ -43,13 +50,45 @@ Template.activityModal.helpers({
 
     let activity_id = Session.get('activity');
 
-    var activity = Activities.findOne(activity_id);
+    var mates = Activities.findOne(activity_id).mates;
 
-    for (var i = 0; i < activity.users.length; i++) {
+    var users = [];
 
-      
+    for (var i = 0; i < mates.length; i++) {
+
+      users.push(Profiles.findOne({user: mates[i]}));
 
     }
+
+    return users
+
+  },
+
+  'result': function() {
+
+    let query = Session.get('query');
+
+    var users = [];
+
+    if (query != "") {
+
+      let mates = Teams.findOne({_id: Router.current().params._id}).mates;
+
+      let results = ProfilesIndex.search(query).fetch();
+
+      for (var i = 0; i < results.length; i++) {
+
+        if (mates.indexOf(results[i].user) > -1) {
+
+          users.push(results[i]);
+
+        }
+
+      }
+
+    }
+
+    return users
 
   }
 
@@ -97,16 +136,12 @@ Template.activityModal.events({
 
   'click #complete': function() {
 
-    console.log('complete');
-
     let activity = Session.get('activity');
     Modal.hide('activityModal');
 
   },
 
   'click #delete': function() {
-
-    console.log('complete');
 
     let activity = Session.get('activity');
 
@@ -136,7 +171,29 @@ Template.activityModal.events({
 
     Updates.insert({activity: Session.get('activity'), title: update, date: moment().format("MMMM Do YYYY")});
 
-    console.log(update);
+  },
+
+  'keyup #query': function() {
+
+    let query = event.target.value;
+
+    Session.set('query', query);
+
+  },
+
+  'click #result': function() {
+
+    let activity = Activities.findOne(Session.get('activity'));
+
+    if (activity.mates.indexOf(this.user) == -1) {
+
+      Activities.update(Session.get('activity'), {$push: {mates: this.user}});
+
+    }
+
+    console.log(activity);
+
+    console.log(this);
 
   }
 

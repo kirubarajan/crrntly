@@ -26,8 +26,6 @@ Template.newActivityModal.events({
     let activity = event.target.activity.value;
     let section = $("select").val()
 
-    console.log(section);
-
     Activities.insert({mates: [Meteor.userId()], author: Meteor.userId(), team: Router.current().params._id, title: activity, section: Session.get('section'), date: moment().format("MMMM Do YYYY")});
 
     Modal.hide('newActivityModal');

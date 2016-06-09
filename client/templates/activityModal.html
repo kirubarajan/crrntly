@@ -35,8 +35,7 @@
                         {{/each}}
 
                         <form id="update">
-                          <input type="text" style="width: 65%" name="update" placeholder="Update" />
-                          <input type="submit" style="width: 30%" class="button" value="Add" />
+                          <input type="text" style="width: 100%" name="update" placeholder="Update" />
                         </form>
 
                       </div>
@@ -46,11 +45,25 @@
 
                       <div class="col-md-4">
 
-                          <h4 style="margin-bottom: 15px" class="spacing"> Users </h4>
+                        <h4 style="margin-bottom: 15px" class="spacing"> Users </h4>
 
-                          <p> Username </p>
-                          <p> Username </p>
-                          <p> Username </p>
+                        {{#each users}}
+                          <p> {{name}} </p>
+                        {{/each}}
+
+                        <form id="search" autocomplete="off">
+                          <input type="text" style="width: 100%" id="query" name="query" placeholder="Invite" />
+                        </form>
+
+                        <div style="margin-top: 10px">
+
+                          {{#each result}}
+
+                            <a id="result"> {{name}} </a>
+
+                          {{/each}}
+
+                        </div>
 
                       </div>
 
